@@ -9,12 +9,12 @@
 - [技术方案与分工（PDF 文本提取版）](docs/engineering/TECHNICAL-DESIGN-extracted.txt)
 - [知乎 API 接口合同](docs/zhihu/API_CONTRACT.md)
 - [知乎 API 历史验证记录](docs/zhihu/HISTORICAL_BASELINE.md)
-- [Codex 评估任务](prompts/ZHIHU_CAPABILITY_EVALUATION.md)
+- [团队搜索能力评估任务（Codex）](prompts/ZHIHU_CAPABILITY_EVALUATION.md)
 
 ## 当前状态
 
 - 知乎全网搜索中文和英文各有一次历史真实调用成功。
-- 官方 Skill 0.7.5、CLI 0.6.3 已由用户报告安装并通过认证；新执行环境仍需复验。
+- 官方 Skill / CLI 是可选的开发验证工具；每个开发或部署环境均需独立检查安装、版本兼容性、认证及额度。
 - 德文搜索、客户核验、额度、授权、稳定性、部署环境尚未验收。
 - 目前仓库为文档初始化，尚未实现业务系统或 PoC。
 
