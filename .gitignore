@@ -1,0 +1,16 @@
+# Credentials and local settings
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+.DS_Store
+.venv/
+__pycache__/
+.pytest_cache/
+node_modules/
+.next/
+dist/
+results/
+**/results/
+*.log
