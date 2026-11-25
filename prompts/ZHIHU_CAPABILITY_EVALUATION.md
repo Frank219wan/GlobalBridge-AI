@@ -2,8 +2,14 @@
 
 本文件为团队共享的搜索能力评估执行规范。目标是实际验证，不是重新实现 SDK 或开发正式业务系统。
 
+## 与当前五人版的关系（2026-11-25）
+
+当前实施参考：[技术设计](../docs/engineering/TECHNICAL-DESIGN.md)、[团队分工](../docs/engineering/TEAM-RESPONSIBILITIES.md)、[业务 API 合同](../docs/engineering/API-CONTRACT.md)。
+
+本文件仅覆盖知乎能力独立 PoC，是 B 市场与客户岗位的一个验证子任务。正式业务技术栈以最新 Next.js / TypeScript / Route Handlers 推荐方案为参考；Python 仅用于独立验证工具，不代表正式服务采用 Python。最新技术方案要求首测知乎站内搜索，并用同批英德查询对比 Exa、Tavily、Brave，选择一个通过验证的海外主供应商。本文件的全网搜索测试补充该任务，不能替代站内搜索或供应商对比验收；需另行安排预算及执行任务。D2 冻结供应商和留存字段，D5 交付客户 ID、关联产品 ID 与可重开报告。原有测试预算及权限限制继续适用于本 PoC。
+
 ## 1. 范围与背景
-阅读仓库 README、docs/product、docs/engineering、docs/zhihu。比赛主线为深圳智能家居传感器制造商（Smart Home Sensor / SHS-001）开拓德国（DE）市场。关注 P0-02 官方能力及 P0-03/04 海外企业搜索、匹配与证据。目标角色：经销商、进口商、批发商、零售渠道、系统集成商。先验证搜索，再决定单供应商或双供应商；本轮不调用 Exa/Tavily/Brave。技术栈冲突保留给团队决策。
+阅读仓库 README、docs/product、docs/engineering、docs/zhihu。比赛主线为深圳智能家居传感器制造商（Smart Home Sensor / SHS-001）开拓德国（DE）市场。关注 P0-02 官方能力及 P0-03/04 海外企业搜索、匹配与证据。目标角色：经销商、进口商、批发商、零售渠道、系统集成商。先验证搜索，再决定单供应商或双供应商；本轮不调用 Exa/Tavily/Brave。正式技术选型遵循最新五人版推荐及团队最终决策。
 
 ## 2. 环境与认证
 检查当前目录、Git 状态、Python 环境；不覆盖已有文件。在独立 PoC 目录内实施。根据官方安装文档或本地配置定位 Skill 与 CLI，不假定任何成员已安装或认证，也不硬编码个人设备路径、版本或凭证来源。CLI 路径可由本地配置项 ZHIHU_CLI_PATH 提供，Skill 路径可由 ZHIHU_SKILL_PATH 提供；这些是 PoC 的本地配置约定，不是官方 CLI 参数。
