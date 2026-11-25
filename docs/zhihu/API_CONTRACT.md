@@ -1,6 +1,6 @@
 # 知乎全网搜索 API 接口合同
 
-依据用户提供的官方接口说明整理；不是独立在线复核的官方文档。
+依据项目收集的官方接口说明整理；尚未独立在线复核，使用前以官方最新文档为准。
 
 ## 请求
 - GET https://developer.zhihu.com/api/v1/content/global_search
